@@ -10,6 +10,7 @@ const EVENT_LEGEND_CHANGED = 'scatter:legend:changed';
 export default class ScatterGraph extends mxReadable(class {}) {
   constructor(datasets) {
     super();
+
     this.$datasets = datasets.filter(x => x.data.length > 0);
     this.$labels = this.$datasets.map((x) =>
       x.label);

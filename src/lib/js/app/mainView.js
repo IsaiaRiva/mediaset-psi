@@ -12,6 +12,7 @@ import StatsTab from './mainView/statsTab.js';
 import FaceCollectionTab from './mainView/faceCollectionTab.js';
 import SettingsTab from './mainView/settingsTab.js';
 import UserManagementTab from './mainView/userManagementTab.js';
+import AdvTab from './mainView/advTab.js';
 
 const ID_MAIN_CONTAINER = `main-${AppUtils.randomHexstring()}`;
 const ID_MAIN_TOASTLIST = `main-${AppUtils.randomHexstring()}`;
@@ -56,8 +57,9 @@ export default class MainView {
     /* read/write/modify access */
     if (this.cognito.canModify()) {
       tabControllers.userManagement = new UserManagementTab();
+      tabControllers.AdvTab = AdvTab
     }
-
+console.log(tabControllers)
     return [
       tabControllers.collection,
       tabControllers.upload,
@@ -66,6 +68,7 @@ export default class MainView {
       tabControllers.faceCollection,
       tabControllers.settings,
       tabControllers.userManagement,
+      tabControllers.AdvTab
     ].filter((x) =>
       x !== undefined);
   }

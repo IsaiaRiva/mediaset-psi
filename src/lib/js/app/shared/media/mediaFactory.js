@@ -13,6 +13,7 @@ import PodcastPreview from './preview/podcastPreview.js';
 import PhotoPreview from './preview/photoPreview.js';
 import DocumentPreview from './preview/documentPreview.js';
 import MediaTypes from './mediaTypes.js';
+import AdvTab from '../../mainView/advTab.js';
 
 export default class MediaFactory {
   static async createMedia(uuid) {
@@ -79,10 +80,13 @@ export default class MediaFactory {
   }
 
   static async createPreviewComponent(media, optionalSearchResults) {
-    await media.getAnalysisResults();
+    // localStorage.setItem(media.)
+    const b = await media.getAnalysisResults();
     switch (media.type) {
       case MediaTypes.Video:
-        return new VideoPreview(media, optionalSearchResults);
+        const a =  new VideoPreview(media, optionalSearchResults);
+        AdvTab.videoData({media, optionalSearchResults})
+        return a  
       case MediaTypes.Audio:
         return new PodcastPreview(media, optionalSearchResults);
       case MediaTypes.Image:

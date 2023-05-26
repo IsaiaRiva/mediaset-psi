@@ -1,0 +1,33 @@
+.adv-video {
+  position: absolute;
+  inset: 0;
+  width: 50%;
+  left: 25%;
+  z-index: 2;
+}
+
+#playerHtml div[data-media-type="video"]{
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.7);
+  width: 50% !important;
+  margin: auto !important;
+}
+
+.main-title {
+  background-image: linear-gradient(to top, #000000, #bd1a1a);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-shadow: 0px 4px 10px rgb(211 147 147 / 80%);
+}
+.main-title h1{
+  font-size: 45px;
+  padding-bottom: 25px;
+}
+.main-title h3{
+  font-size: 30px;
+  padding-bottom: 15px;
+}
+
+#advTab .scatter-graph {
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.7);
+}

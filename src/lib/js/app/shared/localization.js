@@ -49,6 +49,8 @@ export default class Localization {
           StatsTab: 'Stats',
           /* face collection tab panel */
           FaceCollectionTab: 'FaceCollection',
+          /* adv tab panel */
+          AdvTab: 'Adv',
           /* setting tab panel */
           SettingsTab: 'Settings',
           SettingsDesc: 'This setting page allows you to configure and fine tune AI/ML settings for each of the Amazon AI services. (Admin privileges required)',
